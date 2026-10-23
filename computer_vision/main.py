@@ -22,10 +22,11 @@ while True:
     if not success:
         break
     
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 2, 4)
+    # Detect on the mirrored frame so box coordinates match the displayed image
     flipped = cv2.flip(frame, 1)
-    
+    gray = cv2.cvtColor(flipped, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 2, 4)
+
     for(x,y,w,h) in faces:
         cv2.rectangle(flipped, (x,y), (x+w, y+h), (0,255,0),2)
         
