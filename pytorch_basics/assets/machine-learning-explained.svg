@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1340" height="1830" viewBox="0 0 1340 1830"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#475569"/></marker></defs><rect width="1340" height="1830" fill="white"/><text x="55" y="66" font-family="Arial, sans-serif" font-size="36" fill="#1e293b"><tspan x="55" dy="0">HOW YOUR MODEL LEARNS</tspan></text>
+<text x="55" y="105" font-family="Arial, sans-serif" font-size="22" fill="#475569"><tspan x="55" dy="0">Your PyTorch notebook, explained with one tiny prediction machine.</tspan></text>
+<rect x="55" y="133" width="1230" height="87" rx="16" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="78" y="170" font-family="Arial, sans-serif" font-size="24" fill="#2563eb"><tspan x="78" dy="0">THE GOAL: discover a rule from examples</tspan></text>
+<text x="78" y="202" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="78" dy="0">The notebook creates answers with y = 0.7 × x + 0.3. The model must learn 0.7 and 0.3.</tspan></text>
+<text x="55" y="275" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="55" dy="0">1  Give it examples</tspan></text>
+<rect x="55" y="295" width="570" height="175" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="78" y="334" font-family="Arial, sans-serif" font-size="23" fill="#2563eb"><tspan x="78" dy="0">Input x</tspan></text>
+<text x="300" y="334" font-family="Arial, sans-serif" font-size="23" fill="#2563eb"><tspan x="300" dy="0">Correct answer y</tspan></text>
+<text x="78" y="372" font-family="Arial, sans-serif" font-size="22" fill="#1e293b"><tspan x="78" dy="0">0.00</tspan><tspan x="78" dy="28.6">0.50</tspan><tspan x="78" dy="28.6">0.80</tspan></text>
+<text x="300" y="372" font-family="Arial, sans-serif" font-size="22" fill="#1e293b"><tspan x="300" dy="0">0.30</tspan><tspan x="300" dy="28.6">0.65</tspan><tspan x="300" dy="28.6">0.86</tspan></text>
+<rect x="655" y="295" width="630" height="175" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="678" y="335" font-family="Arial, sans-serif" font-size="25" fill="#15803d"><tspan x="678" dy="0">50 examples in your notebook</tspan></text>
+<text x="678" y="374" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="678" dy="0">40 for training: adjust the model</tspan><tspan x="678" dy="27.3">10 held out: check its predictions</tspan><tspan x="678" dy="27.3">The split is ordered: first 40, then last 10.</tspan></text>
+<text x="55" y="527" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="55" dy="0">2  Predict with two adjustable numbers</tspan></text>
+<rect x="55" y="551" width="220" height="111" rx="16" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="77" y="586" font-family="Arial, sans-serif" font-size="19" fill="#2563eb"><tspan x="77" dy="0">INPUT</tspan></text>
+<text x="77" y="626" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="77" dy="0">x = 0.50</tspan></text>
+<polyline points="284,606 330,606" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="344" y="546" width="558" height="123" rx="16" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="369" y="581" font-family="Arial, sans-serif" font-size="22" fill="#7e22ce"><tspan x="369" dy="0">MODEL: prediction = weight × input + bias</tspan></text>
+<text x="369" y="624" font-family="Arial, sans-serif" font-size="29" fill="#1e293b"><tspan x="369" dy="0">0.8 × 0.50 + 0.8 = 1.20</tspan></text>
+<text x="369" y="652" font-family="Arial, sans-serif" font-size="17" fill="#475569"><tspan x="369" dy="0">Illustrative starting values (before learning)</tspan></text>
+<polyline points="915,606 958,606" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="974" y="551" width="311" height="111" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="997" y="585" font-family="Arial, sans-serif" font-size="19" fill="#c2410c"><tspan x="997" dy="0">PREDICTION</tspan></text>
+<text x="997" y="624" font-family="Arial, sans-serif" font-size="26" fill="#c2410c"><tspan x="997" dy="0">1.20  (too high)</tspan></text>
+<text x="75" y="712" font-family="Arial, sans-serif" font-size="22" fill="#475569"><tspan x="75" dy="0">Weight = how steep the line is.     Bias = where the line starts when x is zero.</tspan></text>
+<text x="55" y="770" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="55" dy="0">3  Measure the mistake, then adjust</tspan></text>
+<rect x="55" y="793" width="350" height="169" rx="16" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="78" y="830" font-family="Arial, sans-serif" font-size="21" fill="#c2410c"><tspan x="78" dy="0">COMPARE</tspan></text>
+<text x="78" y="868" font-family="Arial, sans-serif" font-size="23" fill="#1e293b"><tspan x="78" dy="0">Predicted: 1.20</tspan><tspan x="78" dy="29.900000000000002">Correct:    0.65</tspan><tspan x="78" dy="29.900000000000002">Error size: 0.55</tspan></text>
+<polyline points="417,875 452,875" fill="none" stroke="#c2410c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="468" y="793" width="370" height="169" rx="16" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="491" y="830" font-family="Arial, sans-serif" font-size="21" fill="#7e22ce"><tspan x="491" dy="0">FIND THE DIRECTION</tspan></text>
+<text x="491" y="869" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="491" dy="0">loss.backward()</tspan><tspan x="491" dy="27.3">Calculates how weight and</tspan><tspan x="491" dy="27.3">bias affect the average error.</tspan></text>
+<polyline points="850,875 886,875" fill="none" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="902" y="793" width="383" height="169" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="925" y="830" font-family="Arial, sans-serif" font-size="21" fill="#15803d"><tspan x="925" dy="0">TAKE A SMALL STEP</tspan></text>
+<text x="925" y="869" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="925" dy="0">optimizer.step()</tspan><tspan x="925" dy="27.3">Adjusts weight and bias.</tspan><tspan x="925" dy="27.3">Learning rate = 0.01</tspan></text>
+<polyline points="1093,975 1093,1010 230,1010 230,975" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="430" y="1043" font-family="Arial, sans-serif" font-size="23" fill="#2563eb"><tspan x="430" dy="0">REPEAT: predict -&gt; measure -&gt; adjust</tspan></text>
+<text x="55" y="1098" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="55" dy="0">4  Repeating moves the line toward the examples</tspan></text>
+<rect x="55" y="1122" width="630" height="337" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<polyline points="115,1150 115,1400 460,1400" fill="none" stroke="#475569" stroke-width="2.5"/>
+<text x="91" y="1153" font-family="Arial, sans-serif" font-size="18" fill="#475569"><tspan x="91" dy="0">y</tspan></text>
+<text x="465" y="1401" font-family="Arial, sans-serif" font-size="18" fill="#475569"><tspan x="465" dy="0">x</tspan></text>
+<polyline points="115,1296.4705882352941 445,1192.9411764705883" fill="none" stroke="#c2410c" stroke-width="2.5" stroke-dasharray="8 6"/>
+<polyline points="115,1361.1764705882354 445,1270.5882352941176" fill="none" stroke="#15803d" stroke-width="2.5"/>
+<circle cx="115" cy="1361.1764705882354" r="5" fill="#2563eb"/>
+<circle cx="181.0" cy="1343.0588235294117" r="5" fill="#2563eb"/>
+<circle cx="247.0" cy="1324.9411764705883" r="5" fill="#2563eb"/>
+<circle cx="313.0" cy="1306.8235294117646" r="5" fill="#2563eb"/>
+<circle cx="379.0" cy="1288.7058823529412" r="5" fill="#2563eb"/>
+<circle cx="445" cy="1270.5882352941176" r="5" fill="#2563eb"/>
+<text x="475" y="1189" font-family="Arial, sans-serif" font-size="19" fill="#c2410c"><tspan x="475" dy="0">Before</tspan></text>
+<text x="475" y="1219" font-family="Arial, sans-serif" font-size="19" fill="#c2410c"><tspan x="475" dy="0">learning</tspan></text>
+<text x="475" y="1309" font-family="Arial, sans-serif" font-size="19" fill="#15803d"><tspan x="475" dy="0">After</tspan></text>
+<text x="475" y="1339" font-family="Arial, sans-serif" font-size="19" fill="#15803d"><tspan x="475" dy="0">learning</tspan></text>
+<text x="90" y="1436" font-family="Arial, sans-serif" font-size="18" fill="#475569"><tspan x="90" dy="0">Blue dots = examples     Lines = model predictions</tspan></text>
+<rect x="715" y="1122" width="570" height="337" rx="16" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="740" y="1165" font-family="Arial, sans-serif" font-size="25" fill="#2563eb"><tspan x="740" dy="0">Your training loop</tspan></text>
+<text x="740" y="1206" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="740" dy="0">1 epoch = one pass over all 40 examples.</tspan><tspan x="740" dy="27.3">Your notebook runs 1,000 epochs.</tspan><tspan x="740" dy="27.3"></tspan><tspan x="740" dy="27.3">L1Loss averages the absolute errors.</tspan><tspan x="740" dy="27.3">SGD makes small parameter updates.</tspan><tspan x="740" dy="27.3"></tspan><tspan x="740" dy="27.3">Only two numbers are learned:</tspan><tspan x="740" dy="27.3">weight ~ 0.7 and bias ~ 0.3.</tspan></text>
+<text x="55" y="1521" font-family="Arial, sans-serif" font-size="28" fill="#1e293b"><tspan x="55" dy="0">5  Use the learned rule on a new input</tspan></text>
+<rect x="55" y="1543" width="1230" height="133" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="80" y="1588" font-family="Arial, sans-serif" font-size="28" fill="#15803d"><tspan x="80" dy="0">New x = 0.90      -&gt;      0.7 × 0.90 + 0.3      -&gt;      prediction ~ 0.93</tspan></text>
+<text x="80" y="1635" font-family="Arial, sans-serif" font-size="21" fill="#1e293b"><tspan x="80" dy="0">Now it predicts without adjusting its parameters. Compare held-out answers to check accuracy.</tspan></text>
+<rect x="55" y="1700" width="1230" height="92" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="80" y="1735" font-family="Arial, sans-serif" font-size="23" fill="#1e293b"><tspan x="80" dy="0">What does &quot;learning&quot; mean here?</tspan></text>
+<text x="80" y="1771" font-family="Arial, sans-serif" font-size="21" fill="#475569"><tspan x="80" dy="0">Changing weight and bias to reduce error. This is linear regression; it does not process language.</tspan></text></svg>

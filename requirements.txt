@@ -1,0 +1,11 @@
+# Computer Vision & macOS camera support
+opencv-python>=4.8.0
+pyobjc-framework-AVFoundation>=12.0; sys_platform == "darwin"
+
+# Deep Learning & PyTorch
+torch>=2.2.0
+matplotlib>=3.8.0
+
+# Interactive Jupyter Notebooks
+ipykernel>=6.29.0
+nbformat>=5.9.0
