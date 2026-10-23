@@ -69,6 +69,9 @@ Open [`pytorch_basics/PyTorch.ipynb`](pytorch_basics/PyTorch.ipynb) in VS Code o
 ---
 
 ### 3. Mini-LLM (Baby GPT) from Scratch
+
+For a guided course with definitions, visual explanations and exercises, start with the [six-stage sinoLLM learning path](mini_llm/learning_path/README.md). Each notebook runs independently and includes saved example outputs.
+
 Open [`mini_llm/mini_gpt.ipynb`](mini_llm/mini_gpt.ipynb) in VS Code or Jupyter:
 * Builds a full Decoder-Only Transformer architecture cell-by-cell:
   * Character-level Tokenizer (`encode` / `decode`)
